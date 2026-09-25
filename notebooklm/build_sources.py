@@ -83,9 +83,19 @@ def card(art):
         a = inline(alt).replace('ऐसे भी:', '').strip()
         L.append(f'यही प्रश्न ऐसे भी पूछा जा सकता है: {a}')
     first = art.select_one('.row.first p'); keys = art.select('.row.keys .beats .t'); last = art.select_one('.row.last p')
-    if first: L.append(f'पहली पंक्ति (शब्द-दर-शब्द रटनी है): “{inline(first)}”')
-    if keys: L.append('चाबी — इसी क्रम में: ' + ' → '.join(f'({i+1}) {inline(k)}' for i, k in enumerate(keys)))
-    if last: L.append(f'आख़िरी पंक्ति (शब्द-दर-शब्द रटनी है): “{inline(last)}”')
+    slots = art.select('.row.keys .beats .n.slot')
+    flab = art.select_one('.row.first .lab')
+    haan = flab is not None and 'हाँ' in flab.get_text()
+    if slots:
+        L.append('ढाँचा: हाँ → पर → हल → बच्चा')
+        L.append(f'हाँ — पहली पंक्ति (शब्द-दर-शब्द रटनी है): “{inline(first)}”')
+        for sl, k in zip(slots, keys):
+            L.append(f'{sl.get_text(strip=True)}: {inline(k)}')
+        L.append(f'बच्चा — आख़िरी पंक्ति (शब्द-दर-शब्द रटनी है): “{inline(last)}”')
+    else:
+        if first: L.append(f'{"हाँ — " if haan else ""}पहली पंक्ति (शब्द-दर-शब्द रटनी है): “{inline(first)}”')
+        if keys: L.append(('छोटा रूप — बीच में बस इतना: ' if haan else 'चाबी — इसी क्रम में: ') + ' → '.join(f'({i+1}) {inline(k)}' for i, k in enumerate(keys)))
+        if last: L.append(f'{"बच्चा — " if haan else ""}आख़िरी पंक्ति (शब्द-दर-शब्द रटनी है): “{inline(last)}”')
     ans = art.find(class_='ans')
     if ans:
         L.append('पूरा उत्तर:')
