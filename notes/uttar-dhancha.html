@@ -1,0 +1,657 @@
+<title>मंजू जी का उत्तर-ढाँचा</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700&family=Tiro+Devanagari+Hindi&display=swap">
+<style>
+:root{
+  --bg:#F3F5F7; --surface:#FFFFFF; --ink:#18202B; --muted:#5A6472; --line:#D9DEE5; --accent:#1F5F8B;
+  --c1:#2E7D4F; --c2:#A86400; --c3:#1F5F8B; --c4:#B0305A; --c5:#6B4FA0;
+  --c1bg:#E7F3EC; --c2bg:#FBF0E0; --c3bg:#E5EEF6; --c4bg:#F8E7EE; --c5bg:#EEEAF6;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#12161C; --surface:#1A2029; --ink:#E6EAF0; --muted:#9AA4B2; --line:#2A323D; --accent:#7FB3DA;
+    --c1:#7CC99A; --c2:#E6A94F; --c3:#7FB3DA; --c4:#E58AAB; --c5:#B5A2E0;
+    --c1bg:#18291F; --c2bg:#2B2213; --c3bg:#16242F; --c4bg:#2C1921; --c5bg:#221D30;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#12161C; --surface:#1A2029; --ink:#E6EAF0; --muted:#9AA4B2; --line:#2A323D; --accent:#7FB3DA;
+  --c1:#7CC99A; --c2:#E6A94F; --c3:#7FB3DA; --c4:#E58AAB; --c5:#B5A2E0;
+  --c1bg:#18291F; --c2bg:#2B2213; --c3bg:#16242F; --c4bg:#2C1921; --c5bg:#221D30;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:"Mukta","Noto Sans Devanagari",system-ui,sans-serif;font-size:17px;line-height:1.6;padding-inline:16px;padding-block:20px 60px}
+.wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+h1,h2,h3{font-family:"Tiro Devanagari Hindi","Mukta",serif;font-weight:400;text-wrap:balance;margin:0;line-height:1.3}
+h1{font-size:32px}
+h2{font-size:25px}
+h3{font-size:18px;font-family:"Mukta",sans-serif;font-weight:600}
+p{margin:0}
+.muted{color:var(--muted)}
+header.top{display:flex;flex-direction:column;gap:10px}
+.eyebrow{font-size:13px;letter-spacing:.06em;color:var(--muted)}
+.formula{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-family:"Tiro Devanagari Hindi",serif;font-size:24px}
+.formula .ch{padding:4px 14px;border-radius:999px}
+.formula .ar{color:var(--muted);font-size:18px}
+.k1{color:var(--c1);background:var(--c1bg)} .k2{color:var(--c2);background:var(--c2bg)}
+.k3{color:var(--c3);background:var(--c3bg)} .k4{color:var(--c4);background:var(--c4bg)}
+.k5{color:var(--c5);background:var(--c5bg)}
+nav.jump{display:flex;flex-wrap:wrap;gap:8px}
+nav.jump a{font-size:15px;color:var(--accent);text-decoration:none;border:1px solid var(--line);background:var(--surface);padding:4px 12px;border-radius:999px}
+nav.jump a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+button{font:inherit;font-size:15px;cursor:pointer;border:1px solid var(--accent);color:var(--accent);background:var(--surface);padding:6px 14px;border-radius:8px}
+button[aria-pressed="true"]{background:var(--accent);color:var(--surface)}
+section.group{display:flex;flex-direction:column;gap:14px}
+.ghead{display:flex;flex-direction:column;gap:8px;border-top:2px solid var(--ink);padding-top:14px}
+.gnum{font-size:13px;letter-spacing:.06em;color:var(--muted)}
+.legend{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.legend .ch{justify-self:start;padding:1px 10px;border-radius:999px;font-weight:600;font-size:15px;white-space:nowrap}
+.legend .say{font-size:15px}
+.legend .say b{font-weight:600}
+.example{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:6px}
+.cards{display:flex;flex-direction:column;gap:12px}
+article.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:10px}
+article.card header{display:flex;gap:10px;align-items:baseline}
+.id{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;min-width:2.6em}
+ol.beats{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+ol.beats li{display:grid;grid-template-columns:4.6em 1fr;gap:10px;align-items:start}
+.lab{font-size:14px;font-weight:600;padding:1px 0;border-radius:6px;text-align:center}
+.cue{font-size:16px}
+.cue q{quotes:"“" "”";font-weight:600}
+.hidecues .cue{filter:blur(6px);cursor:pointer;user-select:none}
+.hidecues .cue.shown{filter:none}
+.note{font-size:14px;color:var(--muted)}
+.rule{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:6px}
+.rule ul{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:4px}
+.small-list{display:flex;flex-wrap:wrap;gap:8px}
+.small-list span{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:4px 10px;font-size:15px}
+.yellow{background:#FFF3B0;color:#3A3000;border-radius:3px;padding:0 3px}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .yellow{background:#4A3F0A;color:#FFF3B0}}
+:root[data-theme="dark"] .yellow{background:#4A3F0A;color:#FFF3B0}
+@media (max-width:420px){ol.beats li{grid-template-columns:1fr;gap:2px}.lab{justify-self:start;padding:0 8px}h1{font-size:27px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+
+<header class="top">
+  <div class="eyebrow">KVS TGT संस्कृत · 28 सितम्बर 2026 · गुरुग्राम</div>
+  <h1>मंजू जी, हर उत्तर का एक ही रास्ता</h1>
+  <p>उत्तर शब्द-दर-शब्द नहीं रटने। बस यह याद रखिए कि उत्तर <b>किस क्रम में चलता है</b>। ज़्यादातर प्रश्नों का क्रम एक ही है:</p>
+  <div class="formula" aria-label="हाँ, पर, हल, बच्चा">
+    <span class="ch k1">हाँ</span><span class="ar">→</span>
+    <span class="ch k2">पर</span><span class="ar">→</span>
+    <span class="ch k3">हल</span><span class="ar">→</span>
+    <span class="ch k4">बच्चा</span>
+  </div>
+  <p class="muted">इस पन्ने में कोई उत्तर बदला नहीं गया है। सारी पंक्तियाँ आपकी मास्टर नोट्स से ही हैं। यहाँ हर उत्तर को सिर्फ़ इन चार खानों में बाँटकर दिखाया है।</p>
+  <nav class="jump" aria-label="ढाँचे">
+    <a href="#d1">① हाँ-पर-हल-बच्चा</a>
+    <a href="#d2">② परिस्थिति</a>
+    <a href="#d3">③ श्लोक-कहानी</a>
+    <a href="#d4">④ तथ्य</a>
+    <a href="#d5">⑤ अपने क्रम वाले</a>
+  </nav>
+  <div class="tools">
+    <button type="button" id="practice" aria-pressed="false">अभ्यास: बातें छिपाओ</button>
+    <span class="note">दबाने पर सिर्फ़ खानों के नाम दिखेंगे। पहले खुद बोलिए, फिर छिपी बात पर उँगली रखकर देखिए।</span>
+  </div>
+</header>
+
+<div class="rule">
+  <h3>हर उत्तर के तीन पक्के नियम</h3>
+  <ul>
+    <li>पहली पंक्ति में <b>सीधा उत्तर</b>। हाँ या ना पूछा है, तो पहले हाँ या ना।</li>
+    <li>हर खाने में <b>एक-दो वाक्य</b>, बस। पूरा उत्तर 40-45 सेकंड, तथ्य वाला 15-20 सेकंड।</li>
+    <li>आख़िरी पंक्ति से पहले <b>1 सेकंड रुकिए</b>, नज़र मिलाइए, धीरे बोलिए। फिर चुप।</li>
+  </ul>
+</div>
+
+<!-- ① -->
+<section class="group" id="d1">
+  <div class="ghead">
+    <div class="gnum">ढाँचा ① · सबसे ज़्यादा प्रश्न इसी में · 34 उत्तर</div>
+    <h2>हाँ → पर → हल → बच्चा</h2>
+    <p>“क्यों”, “आपके बारे में”, “आपकी राय”, “कैसे पढ़ाएँगी” और दबाव वाले प्रश्न।</p>
+  </div>
+  <div class="legend">
+    <span class="ch k1">हाँ</span><span class="say">सीधा उत्तर, या सामने वाले की बात मान लेना, या पहले अच्छी बात। बोलना शुरू: <b>“जी सर…”</b></span>
+    <span class="ch k2">पर</span><span class="say">असली बात: कारण, कमी या सच्चाई। सबूत (बच्ची, श्लोक, मार्कशीट) अक्सर यहीं आता है। शुरू: <b>“पर सर…”</b></span>
+    <span class="ch k3">हल</span><span class="say">मैं क्या करूँगी, या केंद्रीय विद्यालय कैसे बेहतर करेगा। शुरू: <b>“इसलिए…”</b> या <b>“केंद्रीय विद्यालय में…”</b></span>
+    <span class="ch k4">बच्चा</span><span class="say">आख़िरी पंक्ति, जो बच्चे के फ़ायदे पर या आगे की बात पर ख़त्म हो। शुरू: <b>(1 सेकंड) “सर…”</b></span>
+  </div>
+  <div class="example">
+    <h3>याद रखने का तरीका</h3>
+    <p>चार शब्द बोलने नहीं, सिर्फ़ मन में चलाने हैं: <b>“जी सर… पर सर… इसलिए… सर…”</b> ये चार पुल-शब्द बोलते ही अगला खाना अपने आप याद आ जाता है।</p>
+  </div>
+
+  <div class="cards">
+    <article class="card" id="B1"><header><span class="id">B1</span><h3>HKRN छोड़कर केंद्रीय विद्यालय क्यों?</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">हरियाणा ने मुझे कक्षा दी, और उसी कक्षा ने मुझे शिक्षिका बनाया। मैं भाग नहीं रही, आगे बढ़ रही हूँ।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">अनुबंध पर हूँ, नुकसान मेरा नहीं, पढ़ाई का। सातवीं की बच्ची: ‘मैम, अगले साल भी आप ही?’ मैं ‘हाँ’ नहीं कह पाई।</span></li>
+      <li><span class="lab k3">हल</span><span class="cue">केंद्रीय विद्यालय में एक साल की नहीं, पूरे सफ़र की योजना: छठी से दसवीं तक।</span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue"><q>सर, मैं नौकरी नहीं बदल रही। मैं बच्चों के लिए साल नहीं, सफ़र की योजना बनाना चाहती हूँ।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="B1x"><header><span class="id">B1 क्रॉस</span><h3>KV में भी तबादला होगा, तब उस बच्चे का क्या?</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">हो सकता है, सर। इसीलिए किसी बच्चे से ‘हमेशा रहूँगी’ का वादा नहीं करूँगी।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">पर फ़र्क यह है कि आज मैं अपने अगले साल के बारे में खुद नहीं जानती।</span></li>
+      <li><span class="lab k3">हल</span><span class="cue">केंद्रीय विद्यालय में जब तक रहूँगी, पूरे भरोसे से। जाऊँगी तो बताकर, उसकी तैयारी पूरी करके।</span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue"><q>बच्चे को शिक्षक का जाना उतना नहीं तोड़ता, जितना अचानक जाना तोड़ता है।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="B2"><header><span class="id">B2</span><h3>केंद्रीय विद्यालय में भी तबादला होता है। स्थिरता कहाँ?</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">जी सर, तबादला होगा, और मैं उसके लिए पूरी तरह तैयार हूँ।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">आज मैं एक ही जगह हूँ, फिर भी नहीं जानती कि अगले सत्र में यहीं पढ़ाऊँगी या नहीं।</span></li>
+      <li><span class="lab k3">हल</span><span class="cue">केंद्रीय विद्यालय में शहर बदल सकता है, पर यह नहीं कि मैं संस्कृत की शिक्षिका हूँ। स्थान बदलता है, मेरा होना नहीं।</span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue">तबादले वाले बच्चे की शिक्षिका ही घबराए, तो वह हिम्मत किससे सीखेगा? <q>मुझे एक शहर की स्थिरता नहीं चाहिए। एक पहचान की स्थिरता चाहिए।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="B3"><header><span class="id">B3</span><h3>संस्कृत ही क्यों?</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">इसका उत्तर आपके सामने रखी मेरी मार्कशीट में है। दसवीं में भी, बारहवीं में भी सबसे ज़्यादा अंक संस्कृत में: इक्यानवे।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">पर सर, अंक तो शुरुआत थे।</span></li>
+      <li><span class="lab k3">हल</span><span class="cue">संस्कृत बच्चे को अपनी भाषा की जड़ तक ले जाती है: ‘विद्यालय’, ‘पुस्तक’, ‘समय’। और हर सुभाषित में सीख: ‘उद्यमेन हि सिध्यन्ति…’</span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue"><q>लोग संस्कृत को पुरानी भाषा समझते हैं, सर। मैं उसे आने वाले कल की भाषा मानती हूँ।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="B5"><header><span class="id">B5</span><h3>संस्कृत को रोचक ढंग से कैसे पढ़ाएँगी?</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">बच्चा संस्कृत से नहीं डरता, वह संस्कृत के व्याकरण से डरता है।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">सिद्धांत सीधा है: पहले बोलना, फिर लिखना।</span></li>
+      <li><span class="lab k3">हल</span><span class="cue">चार तरीके: संभाषण, कथा, नाट्य, खेल।</span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue">NEP में कला-समेकित शिक्षा। <q>हमें कुछ नया गढ़ना नहीं पड़ता, बस उसे कक्षा तक सही ढंग से लाना होता है।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="B6"><header><span class="id">B6</span><h3>उम्र 39 है। अब क्यों?</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">जी सर, उनतालीस। और मैं इसे अपनी कमज़ोरी नहीं मानती।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">पर इस उम्र की एक बात कक्षा में काम आती है: छठी का बच्चा अपनी मैम में माँ ढूँढता है। वह भरोसा अपने आप मिलता है।</span></li>
+      <li><span class="lab k3">हल</span><span class="cue">कहीं और पहुँचने की जल्दी नहीं। केंद्रीय विद्यालय को सीढ़ी नहीं, मंज़िल मानकर आई हूँ।</span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue"><q>सर, उम्र ने मुझसे समय लिया है, पर बदले में समझ दी है।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="B8"><header><span class="id">B8</span><h3>भारत में कहीं भी सेवा? दक्षिण मिला तो? भाषा?</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">कहीं भी जाने को तैयार हूँ। यह आवेदन करते समय ही स्वीकार किया था।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">भाषा की बात: संस्कृत पूरे भारत की भाषा है। कक्षा में जो पढ़ाना है, वह वही रहेगा।</span></li>
+      <li><span class="lab k3">हल</span><span class="cue">दक्षिण में संस्कृत की परंपरा गहरी है: मत्तूर, कर्नाटक। स्थानीय भाषा बच्चों के साथ अपने आप आ जाती है।</span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue"><q>शिक्षक जीवन भर विद्यार्थी रहता है।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="C3"><header><span class="id">C3</span><h3>बच्चों का मूल्यांकन कैसे करती हैं?</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">अंक तो देने ही पड़ते हैं, और परीक्षा का अपना महत्व है।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">पर संस्कृत भाषा है: बोल पाता है, लिख पाता है, गतिविधि में भाग लेता है।</span></li>
+      <li><span class="lab k3">हल</span><span class="cue">तुलना दूसरे बच्चे से नहीं, उसके पिछले महीने से। एक वाक्य से दो वाक्य = सबसे बड़ा सुधार।</span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue"><q>अंक बताते हैं बच्चा कहाँ है। मूल्यांकन बताता है बच्चा कहाँ से कहाँ आया।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="C4"><header><span class="id">C4</span><h3>‘बालक’ शब्द-रूप कैसे पढ़ाएँगी?</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">पहले वाक्य, फिर तालिका।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">छठी का बच्चा चौबीस रूप एक साथ देखते ही घबरा जाता है।</span></li>
+      <li><span class="lab k3">हल</span><span class="cue">एक बच्चा ‘बालक’ बने: तिष्ठति, पश्यामि, सह चलामि, पुस्तकं ददामि। बच्चे खुद देखें रूप क्यों बदला। तब तालिका।</span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue"><q>तालिका बच्चा भूल सकता है। जो उसने अपनी आँखों के सामने होते देखा, वह नहीं भूलता।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="C5"><header><span class="id">C5</span><h3>गृहकार्य के बारे में आपका विचार?</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">गृहकार्य ज़रूरी है। घर पर पक्का न हो, तो अगले दिन आधा भूल जाता है।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">पर मात्रा नहीं, उसका असर देखना चाहिए।</span></li>
+      <li><span class="lab k3">हल</span><span class="cue">पाँच पन्ने शब्द-रूप = थका बच्चा। दादी को एक वाक्य = अगली सुबह उत्साह। इसलिए कम, पर रोज़, बोलने वाला।</span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue"><q>गृहकार्य सज़ा नहीं, कक्षा और घर के बीच का पुल है।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="C6"><header><span class="id">C6</span><h3>कक्षा में अनुशासन कैसे?</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">अनुशासन ज़रूरी है। उसके बिना पढ़ाई हो ही नहीं सकती।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">पर अनुशासन डर से नहीं, संबंध से आता है।</span></li>
+      <li><span class="lab k3">हल</span><span class="cue">नियम बच्चों के साथ, संस्कृत में: ‘पूर्वं शृणुत, ततः वदत’। गड़बड़ हो, तो अकेले में बात।</span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue"><q>जिस कक्षा में बच्चा मैम से डरता है, वहाँ चुप्पी होती है। जिस कक्षा में वह मैम से जुड़ा होता है, वहाँ अनुशासन होता है।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="C8"><header><span class="id">C8</span><h3>तीन साल का अनुभव, क्या-क्या किया?</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">तीन साल से हरियाणा के राजकीय विद्यालय में छठी से आठवीं को संस्कृत पढ़ा रही हूँ।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">मेरी कक्षा छोटी है, दस-पंद्रह बच्चों की।</span></li>
+      <li><span class="lab k3">हल</span><span class="cue">कक्षा में: संस्कृत रटी नहीं, बोली जाए। बाहर: परीक्षा, कॉपी, अभिभावक। खुद सीखा: हर बच्चे को अलग जानना।</span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue"><q>सिलेबस पढ़ाना तो सीखा ही, पर उससे ज़्यादा बच्चों को पढ़ना सीखा। यही केंद्रीय विद्यालय में लेकर आ रही हूँ।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="C9"><header><span class="id">C9</span><h3>पढ़ाया हुआ समझ न आए तो?</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">एक-दो बच्चों को समझ न आया, तो उन्हें अलग से समझाऊँगी।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">पर आधी कक्षा को न आया, तो गलती बच्चों की नहीं, मेरे तरीके की है।</span></li>
+      <li><span class="lab k3">हल</span><span class="cue">दूसरा रास्ता: नियम की जगह उदाहरण, ‘मोहनः गच्छति’। ‘समझ आया?’ नहीं, ‘अपने शब्दों में समझाओ’।</span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue"><q>जब तक बच्चा बोलकर न बताए, पता ही नहीं चलता कि उसे समझ आया है या उसने सिर्फ़ सिर हिलाया है।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="D2"><header><span class="id">D2</span><h3>शक्ति और कमज़ोरी?</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">मेरी शक्ति और कमज़ोरी, दोनों एक ही हैं: मैं कम बोलती हूँ।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">कमज़ोरी: कई बार जानते हुए भी बात पूरी नहीं रख पाती।</span></li>
+      <li><span class="lab k3">हल</span><span class="cue">शक्ति: जो कम बोलता है, सुनता ज़्यादा है। अटकते बच्चे को बीच में नहीं टोकती।</span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue"><q>संस्कृत की कक्षा में मुझसे ज़्यादा बच्चों को बोलना चाहिए, और उसके लिए मुझे सुनना आना चाहिए।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="D3"><header><span class="id">D3</span><h3>पाँच साल बाद खुद को कहाँ देखती हैं?</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">केंद्रीय विद्यालय में एक अनुभवी और बेहतर संस्कृत शिक्षिका के रूप में।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">कोशिश: बच्चे संस्कृत को सिर्फ़ परीक्षा का विषय न समझें, बोलने का प्रयास करें।</span></li>
+      <li><span class="lab k3">हल</span><span class="cue">प्रशिक्षणों से सीखना, विद्यालय की गतिविधियों में योगदान।</span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue"><q>विद्यार्थी कहें ‘संस्कृत कठिन नहीं है, हमें इसे पढ़ना अच्छा लगता है’, तो वही मेरी सबसे बड़ी उपलब्धि।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="D6"><header><span class="id">D6</span><h3>पहले इंटरव्यू दिया है? क्या कमी रह गई?</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">जी सर, दिया है। हरियाणा में पीजीटी हिंदी, एचपीएससी और एचएसएससी। अंतिम चरण तक पहुँची थी।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">(कमी पूछें तभी) ज्ञान था, पर बात खुलकर कहने का आत्मविश्वास कम था।</span></li>
+      <li><span class="lab k3">हल</span><span class="cue">रोज़ बोलकर अभ्यास, और अपनी कक्षा में बच्चों के सामने।</span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue"><q>इस बार मैंने उसी पर काम किया है।</q></span></li>
+    </ol><p class="note">यह विषय खुद से नहीं छेड़ना। ‘कितनी बार’ खुद से नहीं।</p></article>
+
+    <article class="card" id="D8"><header><span class="id">D8</span><h3>आपको न चुनने के तीन कारण?</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">तीन कारण दे सकती हूँ।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">पहला, तकनीक अभी सीख रही हूँ। दूसरा, अंग्रेज़ी में धाराप्रवाह नहीं।</span></li>
+      <li><span class="lab k3">हल</span><span class="cue">तीसरा: सिर्फ़ रटवाने वाली शिक्षिका चाहिए, तो मैं सही नहीं।</span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue"><q>पहली दो कमियों पर मेरा काम शुरू हो चुका है, सर। और तीसरी मैं कभी सुधार नहीं पाऊँगी।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="D9"><header><span class="id">D9</span><h3>क्या आप तकनीक में माहिर हैं?</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">खुद को अभी ‘माहिर’ नहीं कहूँगी, पर अनजान भी नहीं हूँ।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">अपनी पढ़ाई में AI और YouTube। PowerPoint सीख रही हूँ।</span></li>
+      <li><span class="lab k3">हल</span><span class="cue">घर में मेरा गुरु मेरा बेटा है, परंपरा उल्टी। बेटे से सीख सकती हूँ, तो विद्यार्थियों से भी।</span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue"><q>मेरे विद्यार्थी मेरी वजह से पीछे नहीं छूटेंगे, क्योंकि मैं सीखने में पीछे नहीं रहूँगी।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="D10"><header><span class="id">D10</span><h3>अंग्रेज़ी माध्यम में पढ़ाना पड़े तो?</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">फ़ॉर्म में ‘हाँ’ भरा है, और उस पर क़ायम हूँ।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">धाराप्रवाह वक्ता होने का दावा नहीं करूँगी।</span></li>
+      <li><span class="lab k3">हल</span><span class="cue">कक्षा चलाने जितनी अंग्रेज़ी है। ज़रूरत पड़ी तो उस पर काम करूँगी।</span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue"><q>बच्चा भाषा से नहीं जुड़ता, शिक्षक से जुड़ता है।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="D11"><header><span class="id">D11</span><h3>आप धीमी लगती हैं, युवा ज़्यादा ऊर्जावान।</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">जी सर, धीमी हूँ, यह मानती हूँ।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">कबीर: ‘धीरे-धीरे रे मना…’ माली सौ घड़े सींचे, फल ऋतु आने पर।</span></li>
+      <li><span class="lab k3">हल</span><span class="cue">कक्षा को ठहरा हुआ शिक्षक भी चाहिए।</span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue"><q>कक्षा को तेज़ शिक्षक भी चाहिए, सर, और ठहरा हुआ शिक्षक भी।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="D12"><header><span class="id">D12</span><h3>आप घबरा रही हैं?</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">थोड़ी सी हूँ सर, छिपाऊँगी नहीं।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">बच्चों को परीक्षा में कहती हूँ, ‘घबराओ मत, जितना आता है लिख दो।’</span></li>
+      <li><span class="lab k3">हल</span><span class="cue">आज मैं खुद उसी कुर्सी पर हूँ।</span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue"><q>तो सर, आज मैं वही कर रही हूँ जो उनसे कहती हूँ। जितना आता है, उतना बता दूँगी।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="E10"><header><span class="id">E10</span><h3>ग़ैर-शैक्षणिक काम मिले तो?</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">जी सर, पूरे मन से करूँगी।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">जैसे परीक्षा ड्यूटी, प्रवेश, खेल-दिवस, वार्षिकोत्सव।</span></li>
+      <li><span class="lab k3">हल</span><span class="cue">छूटा पाठ बाद में पूरा करूँगी। आप भी अभी ऐसा ही काम कर रहे हैं।</span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue"><q>विद्यालय में कोई काम सिर्फ़ ‘ग़ैर-शैक्षणिक’ नहीं होता। हर काम के दूसरे सिरे पर कोई बच्चा होता है।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="F1"><header><span class="id">F1</span><h3>क्या AI शिक्षक की जगह ले लेगा?</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">ज्ञान में AI शायद सच में एक सामान्य शिक्षक से आगे निकल जाए। यह मानती हूँ।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">पर कोई बच्चा चुप क्यों है, यह AI नहीं देखता।</span></li>
+      <li><span class="lab k3">हल</span><span class="cue">‘आचार्यदेवो भव’: आचार्य को देवता कहा, पुस्तक को नहीं। AI सहायक है, प्रतिद्वंद्वी नहीं।</span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue"><q>AI शिक्षक की जगह नहीं लेगा, पर AI का उपयोग जानने वाला शिक्षक, न जानने वाले की जगह ज़रूर ले लेगा।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="F2"><header><span class="id">F2</span><h3>AI संस्कृत पढ़ा देगा, फिर शिक्षक क्यों?</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">नहीं सर। AI संस्कृत पढ़ा सकता है, पर सिखा नहीं सकता।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">पढ़ाना = जानकारी, सिखाना = बच्चे को बदलना।</span></li>
+      <li><span class="lab k3">हल</span><span class="cue">जो सीखना नहीं चाहता, वह शिक्षक के सामने बैठता है। ‘सत्यं वद’ आचरण से आता है। वेद को ‘श्रुति’ कहा गया।</span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue"><q>AI संस्कृत का शब्दकोश बन सकता है, सर, आचार्य नहीं।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="F3"><header><span class="id">F3</span><h3>AI की हर बात जाँचनी पड़े, तो समय दोगुना?</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">जाँचने का मतलब दोबारा पढ़ना नहीं है।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">AI से समझ जल्दी बनती है।</span></li>
+      <li><span class="lab k3">हल</span><span class="cue">जाँच सिर्फ़ तथ्य की: नाम, तिथि, सूत्र, एक मिनट। जैसे GPS चलाते हुए मोड़ का बोर्ड देख लेना।</span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue"><q>उससे सफ़र लंबा नहीं होता, सुरक्षित होता है।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="F4"><header><span class="id">F4</span><h3>AI के ख़तरे?</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">सबसे बड़ा ख़तरा गलत उत्तर नहीं, सही लगने वाला गलत उत्तर है।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">मैंने खुद देखा: ‘भवन्तः कथम् अस्ति’, होना चाहिए ‘सन्ति’। बच्चा यह नहीं पकड़ पाएगा।</span></li>
+      <li><span class="lab k3">हल</span><span class="cue">और ख़तरे: नकली तस्वीरें-आवाज़ें, निजी जानकारी न डालना।</span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue"><q>इसलिए बच्चों को AI चलाना ही नहीं, उसकी बात जाँचना भी सिखाना होगा।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="F5"><header><span class="id">F5</span><h3>बच्चे AI से होमवर्क नकल करेंगे तो?</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">मेरे गृहकार्य की असली जाँच कॉपी में नहीं, कक्षा में होगी।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">अगले दिन खड़ा करके ‘बोलकर समझाओ’, और एक उल्टा प्रश्न। संस्कृत में उच्चारण खुद बता देता है।</span></li>
+      <li><span class="lab k3">हल</span><span class="cue">गृहकार्य ऐसा, जिसका उत्तर घर के पास हो: माँ-पापा को श्लोक सुनाना।</span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue"><q>AI बच्चे की कॉपी भर सकता है, सर, उसकी ज़ुबान नहीं।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="F7"><header><span class="id">F7</span><h3>ये उत्तर AI से बनवाए लगते हैं।</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">जी सर, मदद ली है, छिपाऊँगी नहीं। मॉक-इंटरव्यू जैसा अभ्यास।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">उत्तर बनवाए जा सकते हैं, अनुभव नहीं।</span></li>
+      <li><span class="lab k3">हल</span><span class="cue">AI की संस्कृत में गलतियाँ भी निकलीं: वह सहपाठी है, गुरु नहीं। अर्जुन-द्रोणाचार्य।</span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue"><q>शब्द तैयारी से आते हैं, सर, पर विश्वास अपना होता है। मैं वही बोल रही हूँ जिसे मैं मानती हूँ।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="F10"><header><span class="id">F10</span><h3>अंग्रेज़ी वाला बच्चा या संस्कृत वाला, मान्यता किसे?</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">आज के बाज़ार में अंग्रेज़ी वाले बच्चे को अवसर ज़्यादा मिलेंगे। यह मानती हूँ।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">पर आपके प्रश्न में दो ही बच्चे हैं।</span></li>
+      <li><span class="lab k3">हल</span><span class="cue">मैं तीसरा बच्चा बनाऊँगी: अंग्रेज़ी भी, संस्कृत भी। NEP का त्रि-भाषा सूत्र: चुनना नहीं, जोड़ना।</span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue"><q>सबसे आगे न अंग्रेज़ी वाला होगा, न संस्कृत वाला। सबसे आगे वह होगा जिसके पास दोनों हों।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="F11"><header><span class="id">F11</span><h3>संस्कृत से रोज़गार क्या मिलेगा?</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">सबसे सीधा उत्तर यही कमरा है। आज यहाँ जो पद भर रहा है, वह संस्कृत का है। हर KV, नवोदय, राज्य विद्यालय, प्राध्यापक, अनुवाद, शोध।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">पर मैं संस्कृत को नौकरी के तराज़ू पर नहीं तौलूँगी।</span></li>
+      <li><span class="lab k3">हल</span><span class="cue">संस्कृत बच्चे को शब्द की जड़ पकड़ना सिखाती है।</span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue"><q>और यह आदत उसे हर विषय में, हर नौकरी में काम आती है।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="F12"><header><span class="id">F12</span><h3>संस्कृत की जगह जर्मन-फ़्रेंच क्यों नहीं?</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">मैं जर्मन या फ़्रेंच के ख़िलाफ़ नहीं हूँ। विदेश जाने वाले के काम की हैं।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">पर प्रश्न ‘की जगह’ का नहीं है: त्रि-भाषा सूत्र में तीन में से दो भारतीय।</span></li>
+      <li><span class="lab k3">हल</span><span class="cue">जर्मन नई भाषा देती है, संस्कृत अपनी भाषा खोलकर दिखाती है।</span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue"><q>जिस बच्चे को ‘विद्यालय’ और ‘पुस्तक’ की जड़ पता है, वह जर्मन भी जल्दी सीखता है, क्योंकि उसे शब्द तोड़ना आ चुका है।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="F13"><header><span class="id">F13</span><h3>मोबाइल से बच्चों का क्या नुकसान?</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">मोबाइल बुरा है, यह नहीं कहूँगी। मैं खुद अपनी तैयारी उसी से करती हूँ।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">पर वह समय नहीं, धैर्य खाता है। दस सेकंड वाले बच्चे को चालीस मिनट की कक्षा भारी लगती है।</span></li>
+      <li><span class="lab k3">हल</span><span class="cue">अभिभावक से: मोबाइल छीनो नहीं, धीरे पूरा होने वाला काम दो।</span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue"><q>बच्चे से मोबाइल हटाना हमारे हाथ में नहीं है। पर उसका धैर्य लौटाना हमारे हाथ में है।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="F14"><header><span class="id">F14</span><h3>कोचिंग कल्चर पर विचार?</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">कोचिंग की अपनी जगह है। प्रतियोगी परीक्षाओं में वह दिशा देती है।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">पर छठी-सातवीं का बच्चा भी कोचिंग जाए, तो विद्यालय का काम अधूरा है। सुबह स्कूल, शाम कोचिंग, रात गृहकार्य।</span></li>
+      <li><span class="lab k3">हल</span><span class="cue">मेरी कक्षा में आख़िरी पाँच मिनट प्रश्नों के।</span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue"><q>बच्चे को कोचिंग से बचाने का एक ही तरीका है: उसे कक्षा में ही वह मिल जाए, जिसके लिए वह बाहर जाता है।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="G3"><header><span class="id">G3</span><h3>आज यहाँ आकर कैसा लगा?</h3></header><ol class="beats">
+      <li><span class="lab k1">हाँ</span><span class="cue">अच्छा लगा, सर। घबराहट के साथ आई थी।</span></li>
+      <li><span class="lab k2">पर</span><span class="cue">पर अंदर आते ही वह थोड़ी कम हो गई।</span></li>
+      <li><span class="lab k3">हल</span><span class="cue"><span class="yellow">ध्येय वाक्य लिखा देखा: ‘तत्त्वं पूषन्नपावृणु’</span></span></li>
+      <li><span class="lab k4">बच्चा</span><span class="cue"><q>जिस विद्यालय का पहला वाक्य ही संस्कृत में हो, वहाँ संस्कृत की शिक्षिका को पराया नहीं लगता, सर।</q></span></li>
+    </ol><p class="note">पीला = सच में दिखे तभी बोलें।</p></article>
+  </div>
+</section>
+
+<!-- ② -->
+<section class="group" id="d2">
+  <div class="ghead">
+    <div class="gnum">ढाँचा ② · परिस्थिति वाले प्रश्न · 10 उत्तर</div>
+    <h2>शांत → समझ → सुधार → संपर्क → दिल</h2>
+    <p>यह ढाँचा आपकी नोट्स में पहले से है। “कोई बच्चा ऐसा करे तो…”, “अभिभावक आएँ तो…” वाले सब प्रश्न इसी में। सज़ा कहीं नहीं।</p>
+  </div>
+  <div class="legend">
+    <span class="ch k1">शांत</span><span class="say">पहली पंक्ति: खुद शांत, बच्चे को बुरा नहीं कहना, सुरक्षा पहले। शुरू: <b>“सर, पहले मैं…”</b></span>
+    <span class="ch k5">समझ</span><span class="say">कारण क्या है, अक्सर अकेले में पूछकर। शुरू: <b>“फिर कारण समझूँगी…”</b></span>
+    <span class="ch k3">सुधार</span><span class="say">एक-दो ठोस कदम। शुरू: <b>“फिर…”</b></span>
+    <span class="ch k2">संपर्क</span><span class="say">ज़रूरत हो तो कक्षाध्यापक, प्रधानाचार्य जी, अभिभावक।</span>
+    <span class="ch k4">दिल</span><span class="say">एक छोटी दिल वाली आख़िरी पंक्ति, और चुप।</span>
+  </div>
+  <p class="note">कुछ उत्तरों में ‘समझ’ या ‘संपर्क’ का अलग खाना नहीं है, और कहीं क्रम थोड़ा आगे-पीछे है। नीचे हर उत्तर उसी क्रम में है जैसा नोट्स में है।</p>
+
+  <div class="cards">
+    <article class="card" id="E1"><header><span class="id">E1</span><h3>कोई बच्चा बहुत शरारत करे?</h3></header><ol class="beats">
+      <li><span class="lab k5">समझ</span><span class="cue">पहले समझूँगी वह शरारत क्यों कर रहा है: ध्यान चाहता है, समझ नहीं आया, या खाली बैठा है।</span></li>
+      <li><span class="lab k1">शांत</span><span class="cue">सबके सामने नहीं डाँटूँगी, कक्षा के बाद अकेले में बात।</span></li>
+      <li><span class="lab k3">सुधार</span><span class="cue">उसकी ऊर्जा को ज़िम्मेदारी में: संभाषण में प्रश्न पूछने वाला, श्लोक-गान में आगे।</span></li>
+      <li><span class="lab k4">दिल</span><span class="cue"><q>शरारती बच्चे में ऊर्जा होती है। मेरा काम उसे दिशा देना है, दबाना नहीं।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="E2"><header><span class="id">E2</span><h3>धीमा सीखने वाला बच्चा?</h3></header><ol class="beats">
+      <li><span class="lab k1">शांत</span><span class="cue">धीमा सीखने वाला बच्चा कमज़ोर नहीं होता। उसकी गति अलग होती है।</span></li>
+      <li><span class="lab k5">समझ</span><span class="cue">कहाँ अटक रहा है: अक्षर, उच्चारण या याद।</span></li>
+      <li><span class="lab k3">सुधार</span><span class="cue">पाठ छोटा: एक पंक्ति, तीन रूप। जो अलग से करवाया, वही सबके सामने पूछूँ।</span></li>
+      <li><span class="lab k4">दिल</span><span class="cue"><q>मेरा काम उसकी गति बढ़ाना नहीं है, सर। उसका रास्ता न रुकने देना है।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="E3"><header><span class="id">E3</span><h3>जो बच्चा सीखना ही नहीं चाहता?</h3></header><ol class="beats">
+      <li><span class="lab k1">शांत</span><span class="cue">मेरा मानना है, ऐसा बच्चा सीखना नहीं, पढ़ना नहीं चाहता।</span></li>
+      <li><span class="lab k5">समझ</span><span class="cue">श्लोक याद नहीं, पर फ़िल्म का गाना याद। अकेले में कारण।</span></li>
+      <li><span class="lab k3">सुधार</span><span class="cue">पसंद का दरवाज़ा: कन्दुकः, क्रीडा, क्रीडाङ्गणम्। छोटी जीत पर तारीफ़।</span></li>
+      <li><span class="lab k4">दिल</span><span class="cue"><q>एक छोटी जीत, सौ भाषणों से ज़्यादा काम करती है।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="E4"><header><span class="id">E4</span><h3>बच्चा कहे: ‘संस्कृत बोरिंग है’?</h3></header><ol class="beats">
+      <li><span class="lab k1">शांत</span><span class="cue">उससे बहस नहीं करूँगी। बहस में शिक्षक जीत जाता है और बच्चा हार जाता है।</span></li>
+      <li><span class="lab k3">सुधार</span><span class="cue">एक खेल: ‘कल संस्कृत बंद।’ वह बोलेगा ‘मैं विद्यालय आया’, और ‘विद्यालय’ संस्कृत का निकला।</span></li>
+      <li><span class="lab k5">समझ</span><span class="cue">‘मैम, यह तो हो ही नहीं सकता!’ उसने खुद पकड़ा।</span></li>
+      <li><span class="lab k4">दिल</span><span class="cue"><q>बताया हुआ भूल जाता है, और पकड़ा हुआ याद रहता है।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="E5"><header><span class="id">E5</span><h3>गुस्से में आए अभिभावक?</h3></header><ol class="beats">
+      <li><span class="lab k1">शांत</span><span class="cue">मैं खुद एक माँ हूँ, अभिभावक का गुस्सा असल में डर होता है। बैठाऊँगी, पानी, बिना टोके सुनूँगी।</span></li>
+      <li><span class="lab k3">सुधार</span><span class="cue">गलती मेरी, तो सीधे मानूँगी। गलतफ़हमी हो, तो कॉपी और अंक दिखाऊँगी।</span></li>
+      <li><span class="lab k2">संपर्क</span><span class="cue">बहस नहीं, दूसरों के सामने नहीं।</span></li>
+      <li><span class="lab k4">दिल</span><span class="cue"><q>मैं चाहती हूँ कि वे कमरे से यह सोचकर जाएँ: मैम और मैं, दोनों एक ही बच्चे की तरफ़ हैं।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="E6"><header><span class="id">E6</span><h3>PTM कैसे लेती हैं?</h3></header><ol class="beats">
+      <li><span class="lab k1">शांत</span><span class="cue">अभिभावक अक्सर सिर झुकाकर आते हैं, जैसे शिकायत सुनने आए हों।</span></li>
+      <li><span class="lab k3">सुधार</span><span class="cue">पहला वाक्य बच्चे की कोई अच्छी बात। फिर एक-दो कमियाँ, सबूत के साथ।</span></li>
+      <li><span class="lab k2">संपर्क</span><span class="cue">घर के लिए एक काम: ‘आज संस्कृत में क्या सीखा?’</span></li>
+      <li><span class="lab k4">दिल</span><span class="cue"><q>PTM शिकायत का दिन नहीं, साझेदारी का दिन है।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="E7"><header><span class="id">E7</span><h3>दो बच्चे झगड़ पड़ें?</h3></header><ol class="beats">
+      <li><span class="lab k1">शांत</span><span class="cue">पहले दोनों को अलग करूँगी, देखूँगी चोट तो नहीं। उसी समय फ़ैसला नहीं।</span></li>
+      <li><span class="lab k5">समझ</span><span class="cue">बाद में दोनों से अलग-अलग बात।</span></li>
+      <li><span class="lab k3">सुधार</span><span class="cue">फिर दोनों को साथ बिठाकर।</span></li>
+      <li><span class="lab k2">संपर्क</span><span class="cue">कक्षाध्यापक को सूचना।</span></li>
+      <li><span class="lab k4">दिल</span><span class="cue"><q>मेरा काम जज बनना नहीं, दोस्ती वापस लाना है।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="E8"><header><span class="id">E8</span><h3>बच्चा लगातार अनुपस्थित रहे?</h3></header><ol class="beats">
+      <li><span class="lab k1">शांत</span><span class="cue">इसके पीछे कोई कारण होता है।</span></li>
+      <li><span class="lab k5">समझ</span><span class="cue">बीमारी, घर की परेशानी, पिछड़ने का डर, या किसी से डर।</span></li>
+      <li><span class="lab k2">संपर्क</span><span class="cue">कक्षाध्यापक और अभिभावक से।</span></li>
+      <li><span class="lab k3">सुधार</span><span class="cue">लौटे तो डाँट नहीं: ‘तुम्हारी कमी खली।’</span></li>
+      <li><span class="lab k4">दिल</span><span class="cue"><q>डाँट से बच्चा अगली बार बहाना ढूँढता है, अपनापन से वह खुद लौटता है।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="E9"><header><span class="id">E9</span><h3>विदेश या तबादले से आया नया बच्चा?</h3></header><ol class="beats">
+      <li><span class="lab k1">शांत</span><span class="cue">केंद्रीय विद्यालय में यह आम बात है। उसे सबसे पहले पढ़ाई नहीं, अपनापन चाहिए।</span></li>
+      <li><span class="lab k3">सुधार</span><span class="cue">पहले दिन कक्षा का स्वागत: ‘स्वागतम्, मित्र!’ वह अपनी भाषा का ‘नमस्ते’ कक्षा को सिखाए।</span></li>
+      <li><span class="lab k5">समझ</span><span class="cue">फिर देवनागरी की जाँच, और एक साथी बच्चा।</span></li>
+      <li><span class="lab k4">दिल</span><span class="cue"><q>जो बच्चा पहले दिन कुछ सिखाकर घर जाता है, वह दूसरे दिन खुद आना चाहता है।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="G4"><header><span class="id">G4</span><h3>फ़ौजी के बच्चे पढ़ाना अलग होता है?</h3></header><ol class="beats">
+      <li><span class="lab k1">शांत</span><span class="cue">बच्चा अलग नहीं होता, सर। उसकी परिस्थिति अलग होती है।</span></li>
+      <li><span class="lab k5">समझ</span><span class="cue">ऐसा बच्चा अक्सर साल के बीच में आता है। संस्कृत क्रम वाला विषय है: संधि छूटी तो समास नहीं।</span></li>
+      <li><span class="lab k3">सुधार</span><span class="cue">पहला काम पढ़ाना नहीं, यह देखना कि वह कहाँ से छूटा है।</span></li>
+      <li><span class="lab k4">दिल</span><span class="cue"><q>केंद्रीय विद्यालय की सबसे बड़ी ताक़त यही है कि पाठ्यक्रम वही रहता है। बस छूटा हुआ हिस्सा जोड़ना होता है।</q></span></li>
+    </ol></article>
+  </div>
+</section>
+
+<!-- ③ -->
+<section class="group" id="d3">
+  <div class="ghead">
+    <div class="gnum">ढाँचा ③ · श्लोक या कहानी वाले उत्तर · 7 उत्तर</div>
+    <h2>पहली पंक्ति → श्लोक/कहानी → मतलब → जोड़</h2>
+    <p>जिन उत्तरों की जान एक श्लोक या एक छोटी कहानी है।</p>
+  </div>
+  <div class="legend">
+    <span class="ch k1">पहली</span><span class="say">एक छोटी पंक्ति जो श्लोक या कहानी तक ले जाए।</span>
+    <span class="ch k5">श्लोक</span><span class="say">श्लोक या कहानी, धीरे। स्रोत खुद से नहीं।</span>
+    <span class="ch k3">मतलब</span><span class="say">उसका सीधा अर्थ, अपने शब्दों में।</span>
+    <span class="ch k4">जोड़</span><span class="say">उसे मुझसे या बच्चे से जोड़ना, फिर आख़िरी पंक्ति।</span>
+  </div>
+  <div class="cards">
+    <article class="card" id="B7"><header><span class="id">B7</span><h3>अनुभव तीन साल, दूसरों का आठ-दस। आपको क्यों चुनें?</h3></header><ol class="beats">
+      <li><span class="lab k1">पहली</span><span class="cue">सर, इसका उत्तर मैं अपने ही विषय से दूँ?</span></li>
+      <li><span class="lab k5">श्लोक</span><span class="cue">‘न तेन वृद्धो भवति येनास्य पलितं शिरः…’</span></li>
+      <li><span class="lab k3">मतलब</span><span class="cue">उम्र या साल से कोई बड़ा नहीं होता। उनका अनुभव ज़्यादा है, सम्मान करती हूँ। गिनती सालों से नहीं, सीखने से।</span></li>
+      <li><span class="lab k4">जोड़</span><span class="cue">मैं आज भी अधीयाना हूँ। <q>मेरे पास पीछे के दस साल नहीं हैं, पर आगे के बीस साल हैं, और वे सब मैं केंद्रीय विद्यालय के बच्चों को देना चाहती हूँ।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="C7"><header><span class="id">C7</span><h3>पढ़ाने और सिखाने में फ़र्क?</h3></header><ol class="beats">
+      <li><span class="lab k1">पहली</span><span class="cue">सर, एक उदाहरण से बताऊँ।</span></li>
+      <li><span class="lab k5">कहानी</span><span class="cue">मान लीजिए ‘सत्यं वद’ पढ़ाया, पूरे अंक आए। अगले दिन वही बच्चा होमवर्क पर झूठा बहाना बना दे।</span></li>
+      <li><span class="lab k3">मतलब</span><span class="cue">तो पढ़ाया ज़रूर, सिखाया नहीं। सिखाना तब, जब वह खुद कहे: ‘मैम, होमवर्क नहीं किया।’</span></li>
+      <li><span class="lab k4">जोड़</span><span class="cue"><q>पढ़ाने का सबूत कॉपी में मिलता है, सिखाने का सबूत बच्चे के व्यवहार में।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="D1"><header><span class="id">D1</span><h3>शिक्षिका क्यों बनना चाहती थीं?</h3></header><ol class="beats">
+      <li><span class="lab k1">पहली</span><span class="cue">यह फ़ैसला बहुत पहले कर लिया था। बी.ए. के ठीक अगले साल बी.एड.।</span></li>
+      <li><span class="lab k5">श्लोक</span><span class="cue">‘व्यये कृते वर्धत एव नित्यं, विद्याधनं सर्वधनप्रधानम्।’</span></li>
+      <li><span class="lab k3">मतलब</span><span class="cue">विद्या ऐसा धन है, जो खर्च करने पर बढ़ता है।</span></li>
+      <li><span class="lab k4">जोड़</span><span class="cue">बच्चे की आँखों की चमक = मेरा धन बढ़ा। <q>दुनिया में यही एक काम है, जिसमें जितना देते हैं, उतना बढ़ता है। इसलिए शिक्षिका बनी।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="D4"><header><span class="id">D4</span><h3>सबसे बड़ी उपलब्धि?</h3></header><ol class="beats">
+      <li><span class="lab k1">पहली</span><span class="cue">मेरी सबसे बड़ी उपलब्धि किसी काग़ज़ में नहीं, एक प्रश्न में है।</span></li>
+      <li><span class="lab k5">कहानी</span><span class="cue">तीन साल पहले मैं बस एक नई मैम थी। फिर सातवीं की एक बच्ची: <span class="yellow">‘मैम, अगले साल भी आप ही पढ़ाओगी? आपसे पढ़ना बहुत अच्छा लगता है।’</span></span></li>
+      <li><span class="lab k3">मतलब</span><span class="cue">‘अच्छा लगता है’ बच्चे कई बार कह देते हैं। पर ‘अगले साल भी?’ उसी से पूछते हैं, जिसे खोना नहीं चाहते।</span></li>
+      <li><span class="lab k4">जोड़</span><span class="cue"><q>एक नई मैम से उस प्रश्न तक, यही मेरी तीन साल की कमाई है, सर।</q></span></li>
+    </ol><p class="note">B1 पहले आ चुका हो, तो बच्ची की बात दोबारा पूरी नहीं: “सर, वह मैं पहले ही बता चुकी हूँ…”</p></article>
+
+    <article class="card" id="D5"><header><span class="id">D5</span><h3>जीवन का आदर्श कौन?</h3></header><ol class="beats">
+      <li><span class="lab k1">पहली</span><span class="cue">सावित्रीबाई फुले, देश की पहली महिला शिक्षिका।</span></li>
+      <li><span class="lab k5">कहानी</span><span class="cue">1848, पुणे, लड़कियों का विद्यालय। रास्ते में कीचड़ और गोबर। थैले में दूसरी साड़ी।</span></li>
+      <li><span class="lab k3">मतलब</span><span class="cue">मैं खुद सरकारी कन्या विद्यालय से पढ़ी हूँ। वह दरवाज़ा किसी सावित्रीबाई ने ही खोला था।</span></li>
+      <li><span class="lab k4">जोड़</span><span class="cue"><q>उन्होंने सिखाया कि शिक्षक रास्ते की कीचड़ से नहीं रुकता। बस एक दूसरी साड़ी साथ रखता है।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="D7"><header><span class="id">D7</span><h3>उन्होंने reject किया, तो हम क्यों चुनें?</h3></header><ol class="beats">
+      <li><span class="lab k1">पहली</span><span class="cue">सर, इसका उत्तर भर्तृहरि पहले ही दे चुके हैं।</span></li>
+      <li><span class="lab k5">श्लोक</span><span class="cue">‘प्रारभ्यते न खलु विघ्नभयेन नीचैः…’</span></li>
+      <li><span class="lab k3">मतलब</span><span class="cue">कुछ शुरू ही नहीं करते, कुछ पहली रुकावट पर रुकते हैं, कुछ बार-बार रोके जाने पर भी नहीं छोड़ते। शिक्षक रोज़ ‘ना’ सुनता है, अगले दिन फिर कक्षा।</span></li>
+      <li><span class="lab k4">जोड़</span><span class="cue">मुझे भी बार-बार रोका गया। किस श्रेणी में हूँ, आप तय कीजिए। <q>‘चलो देखते हैं कहाँ कमी रह गई। फिर से कोशिश करेंगे।’</q></span></li>
+    </ol></article>
+
+    <article class="card" id="F8"><header><span class="id">F8</span><h3>तो जो बोल रही हैं, सब रटा हुआ है?</h3></header><ol class="beats">
+      <li><span class="lab k1">पहली</span><span class="cue">(मुस्कुराकर) रटने वालों पर तो हमारी परंपरा में एक कड़ा श्लोक है।</span></li>
+      <li><span class="lab k5">श्लोक</span><span class="cue">‘यथा खरश्चन्दनभारवाही भारस्य वेत्ता न तु चन्दनस्य।’</span></li>
+      <li><span class="lab k3">मतलब</span><span class="cue">चंदन ढोने वाला गधा भार जानता है, सुगंध नहीं।</span></li>
+      <li><span class="lab k4">जोड़</span><span class="cue">तैयारी छिपाऊँगी नहीं, पर संस्कृत रटी नहीं, समझी जाए। <q>सर, मैं चंदन का भार नहीं, उसकी सुगंध लेकर आई हूँ।</q></span></li>
+    </ol></article>
+  </div>
+</section>
+
+<!-- ④ -->
+<section class="group" id="d4">
+  <div class="ghead">
+    <div class="gnum">ढाँचा ④ · तथ्य और छोटे निजी प्रश्न · 15-20 सेकंड</div>
+    <h2>सीधा → एक जोड़ → चुप</h2>
+    <p>यहाँ भाषण नहीं। तथ्य बोलिए, एक पंक्ति में उसका मतलब, और रुक जाइए।</p>
+  </div>
+  <div class="cards">
+    <article class="card" id="B9"><header><span class="id">B9</span><h3>पति क्या करते हैं? परिवार?</h3></header><ol class="beats">
+      <li><span class="lab k1">सीधा</span><span class="cue">मेरे पति घरेलू बिजली उपकरणों की मरम्मत करते हैं: टीवी, फ्रिज, एसी, वॉशिंग मशीन, बैटरी। मेरा बेटा कॉलेज में है।</span></li>
+      <li><span class="lab k3">जोड़</span><span class="cue">यह काम हर शहर में है, क्योंकि हर घर में ये मशीनें हैं।</span></li>
+      <li><span class="lab k4">चुप</span><span class="cue"><q>केंद्रीय विद्यालय में आवेदन का निर्णय हमने मिलकर लिया था।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="G1"><header><span class="id">G1</span><h3>केंद्रीय विद्यालयों की शुरुआत कैसे हुई?</h3></header><ol class="beats">
+      <li><span class="lab k1">सीधा</span><span class="cue">द्वितीय केंद्रीय वेतन आयोग की सिफ़ारिश पर नवंबर 1962 में योजना स्वीकृत। 1963-64 में बीस रेजिमेंटल स्कूल, रक्षा क्षेत्रों में।</span></li>
+      <li><span class="lab k4">जोड़</span><span class="cue"><q>यानी केंद्रीय विद्यालय की शुरुआत ही फ़ौजी के बच्चे से हुई थी। बाक़ी सब बाद में जुड़े।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="G2"><header><span class="id">G2</span><h3>पी एम श्री क्या है?</h3></header><ol class="beats">
+      <li><span class="lab k1">सीधा</span><span class="cue">‘PM Schools for Rising India’, 2022 में शुरू। चुने हुए विद्यालय, NEP 2020 के आदर्श विद्यालय के रूप में, ताकि आसपास के विद्यालय सीखें।</span></li>
+      <li><span class="lab k4">जोड़</span><span class="cue"><q>यानी सर, यहाँ जो होता है, वह सिर्फ़ यहीं के लिए नहीं होता।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="G7"><header><span class="id">G7</span><h3>राष्ट्रीय शिक्षा नीति 2020? संस्कृत के लिए क्या?</h3></header><ol class="beats">
+      <li><span class="lab k1">सीधा</span><span class="cue">10+2 की जगह 5+3+3+4। मातृभाषा में पढ़ाई, कम से कम पाँचवीं तक। रटने की जगह योग्यता।</span></li>
+      <li><span class="lab k4">जोड़</span><span class="cue"><q>नीति संस्कृत को विद्यालय स्तर पर मुख्यधारा में लाती है: एक विकल्प के रूप में, और भारतीय ज्ञान परंपरा के माध्यम के रूप में।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="F9"><header><span class="id">F9</span><h3>NASA ने कहा था, संस्कृत कंप्यूटर की सबसे अच्छी भाषा?</h3></header><ol class="beats">
+      <li><span class="lab k1">सीधा</span><span class="cue">(मुस्कुराकर) यह बात उल्टी फैली है। NASA ने ऐसा नहीं कहा।</span></li>
+      <li><span class="lab k3">जोड़</span><span class="cue">असली बात और सुंदर: 1985 में NASA के एक शोध-केंद्र के वैज्ञानिक ने लिखा कि AI जिस पहिये को बना रहा है, संस्कृत के वैयाकरण पहले बना चुके थे।</span></li>
+      <li><span class="lab k4">चुप</span><span class="cue"><q>संस्कृत को बड़ा बताने के लिए झूठ की ज़रूरत नहीं। पाणिनि का सच ही काफ़ी है: लगभग चार हज़ार सूत्रों में पूरी भाषा का व्याकरण।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="F15"><header><span class="id">F15</span><h3>आजकल शिक्षा में क्या चर्चा में है?</h3></header><ol class="beats">
+      <li><span class="lab k1">सीधा</span><span class="cue">तीन बातें: CBSE में दसवीं की बोर्ड परीक्षा दो बार। कक्षा तीन से आठ में AI और कम्प्यूटेशनल थिंकिंग। नई NCERT किताबें, संस्कृत में ‘दीपकम्’।</span></li>
+      <li><span class="lab k4">जोड़</span><span class="cue"><q>शिक्षा अब एक दिन की परीक्षा से, पूरे साल की समझ की ओर जा रही है।</q></span></li>
+    </ol></article>
+  </div>
+  <p class="note">इसी ढाँचे के बाक़ी छोटे उत्तर नोट्स में जैसे हैं वैसे ही: C10 विधियाँ, D13 छोटे निजी प्रश्न, F6 AI के छोटे प्रश्न, G5 गुरुग्राम पहली बार, G6 वायुसेना का आदर्श वाक्य (सिर्फ़ पूछने पर), G8 गुरुग्राम नाम।</p>
+</section>
+
+<!-- ⑤ -->
+<section class="group" id="d5">
+  <div class="ghead">
+    <div class="gnum">ढाँचा ⑤ · अपने क्रम वाले · रटने हैं</div>
+    <h2>इनका क्रम ही उत्तर है</h2>
+    <p>ये उत्तर ऊपर के किसी ढाँचे में नहीं बँधते। इनका अपना तय क्रम है, वही याद रखिए।</p>
+  </div>
+  <div class="cards">
+    <article class="card" id="A1"><header><span class="id">A1</span><h3>अपना परिचय</h3></header><ol class="beats">
+      <li><span class="lab k1">1</span><span class="cue">नमस्कार सर। मेरा नाम मंजू कुमारी है। चरखी दादरी।</span></li>
+      <li><span class="lab k5">2</span><span class="cue">संस्कृत का धागा: दसवीं, बारहवीं, बी.ए., बी.एड. का शिक्षण विषय।</span></li>
+      <li><span class="lab k3">3</span><span class="cue">सी-टेट द्वितीय प्रश्नपत्र। दिसंबर 2022 से राजकीय विद्यालय, छठी से आठवीं।</span></li>
+      <li><span class="lab k4">4</span><span class="cue"><q>सर, यही धागा अब मैं केंद्रीय विद्यालय तक लाना चाहती हूँ। धन्यवाद।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="A2"><header><span class="id">A2</span><h3>संस्कृत में परिचय</h3></header><ol class="beats">
+      <li><span class="lab k1">1</span><span class="cue">नमस्कारः। मम नाम मञ्जुकुमारी अस्ति।</span></li>
+      <li><span class="lab k5">2</span><span class="cue">…जनपदे निवसामि। अहम् अध्यापिका अस्मि।</span></li>
+      <li><span class="lab k3">3</span><span class="cue">…कक्षासु संस्कृतं पाठयामि।</span></li>
+      <li><span class="lab k4">4</span><span class="cue"><q>संस्कृतं मम प्रियः विषयः अस्ति। धन्यवादः।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="A4"><header><span class="id">A4</span><h3>अंत में कुछ पूछना चाहेंगी?</h3></header><ol class="beats">
+      <li><span class="lab k1">1</span><span class="cue">जी सर, एक प्रश्न है। आपने वर्षों में बहुत से शिक्षक देखे हैं, और परखे भी हैं।</span></li>
+      <li><span class="lab k5">2</span><span class="cue">संस्कृत शिक्षिका के नाते सिर्फ़ एक बात, जो मुझे हर साल पिछले साल से बेहतर बना दे, तो आप क्या कहेंगे?</span></li>
+      <li><span class="lab k3">3</span><span class="cue">सर, परिणाम जो भी हो, मुझे कल फिर उसी कक्षा में जाना है। आपकी वह एक बात साथ ले जाना चाहती हूँ। फिर पूरी चुप्पी।</span></li>
+      <li><span class="lab k4">4</span><span class="cue"><q>जी सर। यह मैं याद रखूँगी। आप सभी का हृदय से धन्यवाद।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="B4"><header><span class="id">B4</span><h3>संस्कृत का महत्व नहीं रहा, समय की बर्बादी?</h3></header><ol class="beats">
+      <li><span class="lab k1">1</span><span class="cue">सर, एक छोटी-सी बात पहले। प्रश्न के ही शब्द गिनो: दो तत्सम + एक फ़ारसी।</span></li>
+      <li><span class="lab k5">2</span><span class="cue">मान्यता: आठवीं अनुसूची, शास्त्रीय भाषा, केंद्रीय विद्यालय का ध्येय वाक्य।</span></li>
+      <li><span class="lab k3">3</span><span class="cue">अंग्रेज़ी दुनिया की खिड़की है, संस्कृत अपने घर की नींव।</span></li>
+      <li><span class="lab k4">4</span><span class="cue"><q>इसलिए सर, संस्कृत पढ़ाना समय की बर्बादी नहीं, अपने ही शब्दों को जड़ से समझना है।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="C1"><header><span class="id">C1</span><h3>श्लोक सुनाइए / पढ़ाकर दिखाइए</h3></header><ol class="beats">
+      <li><span class="lab k1">1</span><span class="cue">आप मेरी सातवीं कक्षा हैं। बोर्ड पर लिख सकती हूँ? शेर वाला प्रश्न।</span></li>
+      <li><span class="lab k5">2</span><span class="cue">दो बार गान। चार शब्द बोर्ड पर।</span></li>
+      <li><span class="lab k3">3</span><span class="cue">भावार्थ। ‘केन कार्याणि सिध्यन्ति?’ गृहकार्य।</span></li>
+      <li><span class="lab k4">4</span><span class="cue"><q>सर, कक्षा में यह पूरा एक कालांश का काम है। मैंने छोटा करके दिखाया।</q></span></li>
+    </ol></article>
+
+    <article class="card" id="C2"><header><span class="id">C2</span><h3>एक पाठ-योजना बताइए</h3></header><ol class="beats">
+      <li><span class="lab k1">1</span><span class="cue">उदाहरण: ‘उद्यमेन हि सिध्यन्ति’। उद्देश्य।</span></li>
+      <li><span class="lab k5">2</span><span class="cue">प्रस्तावना: शेर का प्रश्न। प्रस्तुतीकरण: गान + शब्दार्थ।</span></li>
+      <li><span class="lab k3">3</span><span class="cue">अभ्यास: ‘केन कार्याणि सिध्यन्ति?’ गृहकार्य।</span></li>
+      <li><span class="lab k4">4</span><span class="cue"><q>योजना कागज़ पर बनती है, कक्षा में लचीली रहती है। बच्चे जहाँ अटकें, योजना वहीं रुकती है।</q></span></li>
+    </ol></article>
+  </div>
+  <p class="note">बाक़ी: A3 अंग्रेज़ी में परिचय, E11 भूकंप या बच्चा बेहोश (झुको, ढको, पकड़ो; कतार में मैदान; गिनती; प्रधानाचार्य जी को सूचना)। दोनों नोट्स में जैसे हैं।</p>
+</section>
+
+<div class="rule">
+  <h3>अनजान प्रश्न आए तो</h3>
+  <ul>
+    <li>पहले देखिए, कौन-सा ढाँचा लगेगा। “क्यों / राय” है तो ①, “बच्चा ऐसा करे तो” है तो ②।</li>
+    <li>फिर मन में चार पुल-शब्द: “जी सर… पर सर… इसलिए… सर…”। हर खाने में एक वाक्य भी काफ़ी है।</li>
+    <li>कुछ न सूझे तो नोट्स वाले कवच: “सर, एक क्षण लूँ।”</li>
+  </ul>
+</div>
+
+</div>
+
+<script>
+(function(){
+  var btn=document.getElementById('practice');
+  var root=document.body;
+  var KEY='dhancha-practice';
+  function set(on){
+    root.classList.toggle('hidecues',on);
+    btn.setAttribute('aria-pressed',on?'true':'false');
+    btn.textContent=on?'अभ्यास बंद: सब दिखाओ':'अभ्यास: बातें छिपाओ';
+    if(!on){document.querySelectorAll('.cue.shown').forEach(function(c){c.classList.remove('shown')})}
+  }
+  try{ if(localStorage.getItem(KEY)==='1') set(true); }catch(e){}
+  btn.addEventListener('click',function(){
+    var on=!root.classList.contains('hidecues'); set(on);
+    try{localStorage.setItem(KEY,on?'1':'0')}catch(e){}
+  });
+  document.addEventListener('click',function(e){
+    var c=e.target.closest('.cue');
+    if(c && root.classList.contains('hidecues')) c.classList.toggle('shown');
+  });
+})();
+</script>
